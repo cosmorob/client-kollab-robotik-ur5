@@ -4,6 +4,8 @@ Dieses Projekt ist im Rahmen des Masterstudiums "Wirtschaftsinformatik / IT-Mana
 in Kollaboration mit einem Getriebehersteller entstanden. Ziel war es, eine experimentelle 
 Mensch-Roboter-Kollaboration für eine Getriebemontage mit einem Universal Roboter UR5 umzusetzen.
 
+![Hero](https://github.com/cosmorob/client-kollab-robotik-ur5/blob/main/img/hero.png?raw=true)
+
 ## Architektur
 
 Client App ↔ Websocket Port 3000 ↔ Server App ↔ TCP Server Port 30001 ↔ UR5
@@ -11,6 +13,8 @@ Client App ↔ Websocket Port 3000 ↔ Server App ↔ TCP Server Port 30001 ↔ 
 Der Client ist eine einfache Web-Applikation, die Websocket-Verbindung auf Port 3000 mit
 der Server-Applikation herstellt. Die Server-Applikation kommuniziert mit dem UR5 
 über einen TCP-Server auf Port 30001.
+
+![Hero 2](https://github.com/cosmorob/client-kollab-robotik-ur5/blob/main/img/hero-architecture.png?raw=true)
 
 ## UI
 
