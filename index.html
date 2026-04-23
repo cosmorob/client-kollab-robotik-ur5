@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="open-iconic-master/font/css/open-iconic-bootstrap.min.css"/>
+
+    <title>UR5 Roboter Client</title>
+</head>
+<body>
+<div class="jumbotron vertical-center">
+    <main role="main" class="container shadow-sm rounded">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-sm-12 col-lg-9 col-xl-7 wrapper">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="img/nordakademie-logo.png" class="logo nordakademie" alt="">
+                    </div>
+                    <div class="col-6">
+
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-6 socket-info">
+                        <div id="socket-init">
+                            <span class="oi oi-transfer"></span> Socket Initialisierung...
+                        </div>
+                        <div id="socket-error" style="display:none;">
+                            <span class="oi oi-x"></span> Socket Error.
+                        </div>
+                        <div id="socket-running" style="display:none;">
+                            <span class="oi oi-check"></span> Socket Verbindung ok.
+                        </div>
+                    </div>
+                    <div class="col-6 robot-info">
+                        <div id="robot-init">
+                            <span class="oi oi-transfer"></span> Roboter Initialisierung...
+                        </div>
+                        <div id="robot-error" style="display:none;">
+                            <span class="oi oi-x"></span> Keine Verbindung zum Roboter.
+                        </div>
+                        <div id="robot-running" style="display:none;">
+                            <span class="oi oi-check"></span> Roboter Verbindung ok.
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input disabled type="text" class="form-control" id="barcode" autofocus title="">
+                            <small id="barcodeHelp" class="form-text text-muted">Scannen Sie den Auftrags-Barcode.
+                            </small>
+                        </div>
+                        <hr/>
+                        <p class="text-muted text-center">Oder wählen Sie ein Getriebemodell aus</p>
+                        <hr/>
+                        <div class="row models"><!-- Wird durch Model-Typen in der client.js befüllt --></div>
+                        <hr/>
+                        <div class="error-wrapper"></div>
+                        <hr/>
+                        <small class="text-muted text-small">2018 Kollaborative Robotik. T. Friedrichs, M. Esmann, M.
+                            Kulschewski, J.E. Wähling & R. Hagemann
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Bestätigungs Fenster -->
+<div class="modal fade" id="affirmModal" tabindex="-1" role="dialog" aria-labelledby="affirmModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="affirmModalLabel">Bitte bestätigen Sie die Montage</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success affirm" data-dismiss="modal">Bestätigen</button>
+                <button type="button" class="btn btn-error" data-dismiss="modal">Abbrechen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap4.js"></script>
+<script src="js/socket.io.js"></script>
+<script src="js/models.js"></script>
+<script src="js/client.js"></script>
+</body>
+</html>

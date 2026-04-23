@@ -1,0 +1,46 @@
+.wrapper {
+    background: white;
+    -webkit-box-shadow: 0 0 9px 0 rgba(173, 173, 173, 1);
+    -moz-box-shadow: 0 0 9px 0 rgba(173, 173, 173, 1);
+    box-shadow: 0 0 9px 0 rgba(173, 173, 173, 1);
+    border-radius: 4px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.vertical-center {
+    min-height: 100%; /** Fallback **/
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.logo.nordakademie {
+    margin-top: 30px;
+}
+
+.model-image {
+    max-width:180px;
+    margin:auto;
+}
+
+.error-wrapper {
+    min-height: 60px;
+}
+
+#socket-init span, #robot-init span {
+    color: #ecba63;
+}
+
+#socket-error span, #robot-error span {
+    color: #fa7272;
+}
+
+#socket-running span, #robot-running span {
+    color: #b3f097;
+}
